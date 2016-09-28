@@ -1,0 +1,16 @@
+Package: simplifyR
+Type: Package
+Title: Simplifying frequently used functions
+Version: 0.0.1
+Date: 2016-09-27
+Author: Mario Deng
+Maintainer: Mario Deng <mariodeng@googlemail.com>
+Description: Simplifies frequently used standard R functions, simplifyR
+License: MIT + file LICENSE
+LazyData: TRUE
+Depends:
+    R(>= 2.10.0)
+Suggests:
+    testthat
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1

@@ -13,5 +13,9 @@
 head0 = function(df, n = 4, m = 4){
   if(!is.data.frame(df) && !is.matrix(df))
     return(head(df))
+  if(nrow(df) < n)
+    n = nrow(df)
+  if(ncol(df) < m)
+    m = ncol(df)
   return(df[1:n, 1:m])
 }

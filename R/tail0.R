@@ -13,5 +13,9 @@
 tail0 = function(df, n = 4, m = 4){
   if(!is.data.frame(df) && !is.matrix(df))
     return(tail(df))
+  if(nrow(df) < n)
+    n = nrow(df)
+  if(ncol(df) < m)
+    m = ncol(df)
   return(df[(nrow(df)-(n-1)):nrow(df), (ncol(df)-(m-1)):ncol(df)])
 }

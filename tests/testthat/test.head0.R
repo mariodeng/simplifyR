@@ -21,10 +21,17 @@ test_that("tail works for DF and Matrix", {
   expect_true(nrow(res) == 5)
   expect_true(ncol(res) == 6)
 
+  my_df = matrix(runif(36), ncol = 3)
+  expect_true(nrow(head0(my_df)) == 4)
+  expect_true(ncol(head0(my_df)) == 3)
+
+  expect_true(nrow(tail0(my_df)) == 4)
+  expect_true(ncol(tail0(my_df)) == 3)
+
 })
 
 
-test_that("tail works for matrix/df objects", {
+test_that("tail works for non matrix/df objects", {
 
   v = 1:10
   res = tail0(v)
